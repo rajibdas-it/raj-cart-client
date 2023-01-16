@@ -13,7 +13,7 @@ const Categories = () => {
         <div class="relative rounded-sm overflow-hidden group">
           <img src={bedroom} alt="" class="w-full" />
           <a
-            href="#"
+            href="/"
             class="absolute inset-0 bg-black bg-opacity-40 flex justify-center items-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-50 transition"
           >
             Bedroom
@@ -22,7 +22,7 @@ const Categories = () => {
         <div class="relative rounded-sm overflow-hidden group">
           <img src={sofa} alt="" class="w-full" />
           <a
-            href="#"
+            href="/"
             class="absolute inset-0 bg-black bg-opacity-40 flex justify-center items-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-50 transition"
           >
             Sofa
@@ -31,7 +31,7 @@ const Categories = () => {
         <div class="relative rounded-sm overflow-hidden group">
           <img src={office} alt="" class="w-full" />
           <a
-            href="#"
+            href="/"
             class="absolute inset-0 bg-black bg-opacity-40 flex justify-center items-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-50 transition"
           >
             Office
