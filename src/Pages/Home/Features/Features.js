@@ -6,7 +6,7 @@ import serviceHour from "../../../assets/images/icons/service-hours.svg";
 const Features = () => {
   return (
     <div class="container py-16">
-      <div class="w-10/12 mx-auto grid grid-cols-3 gap-6 justify-center">
+      <div class="w-10/12 mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 justify-center">
         <div class="border border-primary rounded-sm px-3 py-6 flex justify-center items-center gap-5">
           <img src={deliveryVan} alt="" class="w-12 h-12 object-contain" />
           <div>

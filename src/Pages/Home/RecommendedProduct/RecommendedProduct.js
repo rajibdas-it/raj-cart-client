@@ -10,7 +10,7 @@ const RecommendedProduct = () => {
       <h1 class="text-3xl font-medium text-gray-800 uppercase mb-6">
         recommended for you
       </h1>
-      <div class="grid grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div class="bg-white shadow rounded overflow-hidden">
           <div class="relative group">
             <img src={one} alt="" class="w-full" />

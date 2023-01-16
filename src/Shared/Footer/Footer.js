@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <>
       <footer class="bg-white pt-16 pb-12 border-t border-gray-100">
-        <div class="container grid grid-cols-3">
+        <div class="container grid grid-cols-1 lg:grid-cols-3">
           <div class="col-span-1 space-y-8">
             <img src="/assets/images/logo.svg" alt="" />
             <p class="text-gray-500">
@@ -27,7 +27,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div class="col-span-2 grid grid-cols-2 gap-8">
+          <div class="col-span-2 grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div class="grid grid-cols-2 gap-8">
               <div>
                 <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">
@@ -161,7 +161,7 @@ const Footer = () => {
       </footer>
 
       <div class="bg-gray-800 py-4">
-        <div class="container flex items-center justify-between">
+        <div class="container flex sm:flex-col lg:flex-row justify-between items-center">
           <p class="text-white">&copy; RAFCART - All Rights Reserved</p>
           <img src={bankList} alt="" class="h-5" />
         </div>
