@@ -3,6 +3,9 @@ import one from "../../../assets/images/products/product9.jpg";
 import two from "../../../assets/images/products/product11.jpg";
 import three from "../../../assets/images/products/product3.jpg";
 import four from "../../../assets/images/products/product1.jpg";
+import { AiFillStar } from "react-icons/ai";
+import { FiSearch } from "react-icons/fi";
+import { BsCart3, BsHeart } from "react-icons/bs";
 
 const RecommendedProduct = () => {
   return (
@@ -196,13 +199,13 @@ const RecommendedProduct = () => {
                 href="/"
                 class="text-white text-lg w-9 h-9 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
               >
-                <i class="fas fa-search"></i>
+                <FiSearch />
               </a>
               <a
                 href="/"
                 class="text-white text-lg w-9 h-9 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
               >
-                <i class="far fa-heart"></i>
+                <BsHeart />
               </a>
             </div>
           </div>
@@ -219,19 +222,19 @@ const RecommendedProduct = () => {
             <div class="flex items-center space-x-2">
               <div class="flex gap-1 text-sm text-yellow-400">
                 <span>
-                  <i class="fas fa-star"></i>
+                  <AiFillStar />
                 </span>
                 <span>
-                  <i class="fas fa-star"></i>
+                  <AiFillStar />
                 </span>
                 <span>
-                  <i class="fas fa-star"></i>
+                  <AiFillStar />
                 </span>
                 <span>
-                  <i class="fas fa-star"></i>
+                  <AiFillStar />
                 </span>
                 <span>
-                  <i class="fas fa-star"></i>
+                  <AiFillStar />
                 </span>
               </div>
               <p class="text-gray-500 text-xs ml-3">(150)</p>
