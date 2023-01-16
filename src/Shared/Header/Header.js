@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
 import { BsCart3, BsHeart } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { FaUserAlt } from "react-icons/fa";
 
 const Header = () => {
   return (
@@ -66,66 +67,39 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <div className="z-10 bg-gray-800">
+      {/* <div>
         <section className="py-4 shadow-sm bottom-0 fixed bg-white w-full z-10 block lg:hidden">
           <div className="container flex items-center justify-evenly">
             <a href="/">
               <img src="/assets/images/logo.svg" className="w-32" alt="" />
             </a>
-
-            <div className="w-full max-w-xl relative flex">
-              <span className="absolute left-4 top-3 text-lg text-gray-400">
-                <FiSearch className="w-6 h-6" />
-              </span>
-              <input
-                type="text"
-                placeholder="Search"
-                className="w-full border border-primary border-r-0 pl-12 py-3 pr-3 rounded-l-md focus:outline-none"
-              />
-              <button className="bg-primary px-8 rounded-r-md border border-primary text-white hover:bg-transparent hover:text-primary transition">
-                Search
+            <div className="flex flex-col justify-center items-center">
+              <button className=" px-8 rounded-r-md  text-gray-800">
+                <FiSearch />
               </button>
+              <p className="text-gray-800 text-sm">Search</p>
             </div>
-
-            <div className="flex items-center justify-center space-x-10">
-              <a
-                href="/"
-                className="text-center text-gray-700 hover:text-primary transition relative"
-              >
-                <div className="text-3xl">
-                  <BsHeart />
-                </div>
-                <div className="text-xs leading-3">Wish List</div>
-                <span className="absolute right-2 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs">
-                  8
-                </span>
-              </a>
-
-              <a
-                href="/"
-                className="text-center text-gray-700 hover:text-primary transition relative"
-              >
-                <div className="text-2xl">
-                  <BsCart3 />
-                </div>
-                <div className="text-xs leading-3">Cart</div>
-                <span className="absolute -right-3 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs">
-                  8
-                </span>
-              </a>
-              <a
-                href="/"
-                className="text-center text-gray-700 hover:text-primary transition relative"
-              >
-                <div className="text-2xl">
-                  <i className="fa-regular fa-user"></i>
-                </div>
-                <div className="text-xs leading-3">Account</div>
-              </a>
+            <div className="flex flex-col justify-center items-center">
+              <button className=" px-8 rounded-r-md  text-gray-800">
+                <BsHeart />
+              </button>
+              <p className="text-gray-800 text-sm">Wishlist</p>
+            </div>
+            <div className="flex flex-col justify-center items-center ">
+              <button className="px-8 rounded-r-md  text-gray-800">
+                <BsCart3 />
+              </button>
+              <p className="text-gray-800 text-sm">Cart</p>
+            </div>
+            <div className="flex flex-col justify-center items-center ">
+              <button className="px-8 rounded-r-md  text-gray-800">
+                <FaUserAlt />
+              </button>
+              <p className="text-gray-800 text-sm">Account</p>
             </div>
           </div>
         </section>
-      </div>
+      </div> */}
 
       <nav className="bg-gray-800">
         <div className="container flex">
