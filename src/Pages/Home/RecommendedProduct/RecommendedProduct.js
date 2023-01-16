@@ -1,14 +1,14 @@
 import React from "react";
-import one from "../../../assets/images/products/product1.jpg";
+import one from "../../../assets/images/products/product9.jpg";
 import two from "../../../assets/images/products/product11.jpg";
 import three from "../../../assets/images/products/product3.jpg";
-import four from "../../../assets/images/products/product5.jpg";
+import four from "../../../assets/images/products/product1.jpg";
 
-const Product = () => {
+const RecommendedProduct = () => {
   return (
     <div class="container pb-16">
       <h1 class="text-3xl font-medium text-gray-800 uppercase mb-6">
-        top new arrival
+        recommended for you
       </h1>
       <div class="grid grid-cols-4 gap-6">
         <div class="bg-white shadow rounded overflow-hidden">
@@ -120,6 +120,7 @@ const Product = () => {
               <p class="text-gray-500 text-xs ml-3">(150)</p>
             </div>
           </div>
+
           <a
             href="/"
             class="block w-full border border-primary py-1 text-center text-white bg-primary rounded-b hover:bg-transparent hover:text-primary transition"
@@ -131,7 +132,6 @@ const Product = () => {
         <div class="bg-white shadow rounded overflow-hidden">
           <div class="relative group">
             <img src={three} alt="" class="w-full" />
-            {/* <!-- invisible group-hover:visible transition duration-1000 opactiy badh e ei vabeo kora jay tobe transition   --> */}
             <div class="absolute inset-0 bg-black bg-opacity-40 flex justify-center items-center gap-2 opacity-0 group-hover:opacity-100 transition">
               <a
                 href="/"
@@ -206,7 +206,6 @@ const Product = () => {
               </a>
             </div>
           </div>
-
           <div class="pt-4 pb-3 px-4">
             <a href="/">
               <h4 class="font-roboto uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">
@@ -238,6 +237,7 @@ const Product = () => {
               <p class="text-gray-500 text-xs ml-3">(150)</p>
             </div>
           </div>
+
           <a
             href="/"
             class="block w-full border border-primary py-1 text-center text-white bg-primary rounded-b hover:bg-transparent hover:text-primary transition"
@@ -250,4 +250,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default RecommendedProduct;
