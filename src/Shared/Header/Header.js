@@ -109,7 +109,7 @@ const Header = () => {
             </span>
             <span className="capitalize ml-2 text-white">all categories</span>
 
-            <div className="absolute w-full left-0 top-full bg-white shadow-md py-3 divide-y divide-gray-300 divide-dashed opacity-0 group-hover:opacity-100 transition duration-300 invisible group-hover:visible">
+            <div className="absolute w-full left-0 top-full bg-white shadow-md py-3 divide-y divide-gray-300 divide-dashed opacity-0 group-hover:opacity-100 transition duration-300 hidden group-hover:block">
               <a
                 href="/"
                 className="flex items-center px-6 py-3 hover:bg-gray-100 transition"
@@ -191,7 +191,7 @@ const Header = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-between flex-grow pl-12">
+          <div className="hidden lg:flex items-center justify-between flex-grow pl-12">
             <div className="flex items-center space-x-6 capitalize">
               <Link
                 to="/"

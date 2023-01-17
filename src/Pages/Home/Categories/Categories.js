@@ -9,7 +9,7 @@ const Categories = () => {
       <h2 class="text-roboto text-2xl font-medium text-gray-800 uppercase mb-6">
         shop by category
       </h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-3">
         <div class="relative rounded-sm overflow-hidden group">
           <img src={bedroom} alt="" class="w-full" />
           <a

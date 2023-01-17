@@ -3,6 +3,7 @@ import one from "../../../assets/images/products/product1.jpg";
 import two from "../../../assets/images/products/product11.jpg";
 import three from "../../../assets/images/products/product3.jpg";
 import four from "../../../assets/images/products/product5.jpg";
+import Button from "../../../Components/Button/Button";
 
 const Product = () => {
   return (
@@ -62,12 +63,9 @@ const Product = () => {
             </div>
           </div>
 
-          <a
-            href="/"
-            class="block w-full border border-primary py-1 text-center text-white bg-primary rounded-b hover:bg-transparent hover:text-primary transition"
-          >
-            Add to Cart
-          </a>
+          <Button path="/shop" paddingSizeY={"py-5"}>
+            New
+          </Button>
         </div>
 
         <div class="bg-white shadow rounded overflow-hidden">
