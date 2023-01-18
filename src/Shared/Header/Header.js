@@ -41,14 +41,14 @@ const Header = () => {
 
           <div className="flex items-center justify-center space-x-10">
             <Link
-              to="/wishlist"
+              to="/user/wishlist"
               className="text-center text-gray-700 hover:text-primary transition relative"
             >
-              <div className="text-3xl">
+              <div className="text-2xl">
                 <BsHeart />
               </div>
               <div className="text-xs leading-3">Wish List</div>
-              <span className="absolute right-2 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs">
+              <span className="absolute right-3 -top-2 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs">
                 8
               </span>
             </Link>
@@ -65,15 +65,17 @@ const Header = () => {
                 8
               </span>
             </a>
-            <a
-              href="/"
+            <Link
+              to="/user"
               className="text-center text-gray-700 hover:text-primary transition relative"
             >
-              <div className="text-2xl">
-                <i className="fa-regular fa-user"></i>
+              <div className="flex flex-col justify-center items-center">
+                <div className="text-2xl mt-1">
+                  <FaUserAlt />
+                </div>
+                <div className="text-xs leading-3">Account</div>
               </div>
-              <div className="text-xs leading-3">Account</div>
-            </a>
+            </Link>
           </div>
         </div>
       </header>
