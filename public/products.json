@@ -1,12 +1,46 @@
 [
   {
+    "id": 1,
     "productName": "Guyer Chair",
-    "img": "url",
+    "img": "https://i.ibb.co/K9J42z2/product9.jpg",
+    "categoryName": "",
+    "categoryId": "",
+    "price": "25.00",
+    "discountPrice": "30.00",
+    "ratings": "4",
+    "reviewNo": "5"
+  },
+  {
+    "id": 2,
+    "productName": "Double Bed",
+    "img": "https://i.ibb.co/3CWBwCs/product11.jpg",
     "categoryName": "",
     "categoryId": "",
     "price": "55.00",
-    "disCountPrice": "55.00",
-    "ratings": "4",
-    "reviewNo": "150"
+    "discountPrice": "70.00",
+    "ratings": "5",
+    "reviewNo": "20"
+  },
+  {
+    "id": 3,
+    "productName": "Swan Mattress",
+    "img": "https://i.ibb.co/J7mDkyw/product3.jpg",
+    "categoryName": "",
+    "categoryId": "",
+    "price": "20.00",
+    "discountPrice": "30.00",
+    "ratings": "3",
+    "reviewNo": "15"
+  },
+  {
+    "id": 4,
+    "productName": "Dual Sofa",
+    "img": "https://i.ibb.co/pLftfDM/product1.jpg",
+    "categoryName": "",
+    "categoryId": "",
+    "price": "30.00",
+    "discountPrice": "40.00",
+    "ratings": "5",
+    "reviewNo": "30"
   }
 ]

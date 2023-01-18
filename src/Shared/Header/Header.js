@@ -16,7 +16,7 @@ const Header = () => {
       .then((data) => setCategories(data));
   }, []);
 
-  console.log(categories);
+  // console.log(categories);
   return (
     <div>
       <header className="py-4 shadow-sm bg-white hidden lg:block">
@@ -121,6 +121,7 @@ const Header = () => {
             <div className="absolute w-full left-0 top-full bg-white shadow-md py-3 divide-y divide-gray-300 divide-dashed opacity-0 group-hover:opacity-100 transition duration-300 hidden group-hover:block">
               {categories.map((category) => (
                 <a
+                  key={category.id}
                   href="/"
                   className="flex items-center px-6 py-3 hover:bg-gray-100 hover:text-red-500 transition"
                 >
