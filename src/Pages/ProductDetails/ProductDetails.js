@@ -1,41 +1,36 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
+import mainImg from "../../assets/images/products/product9.jpg";
+import one from "../../assets/images/products/product1.jpg";
+import two from "../../assets/images/products/product9.jpg";
+import three from "../../assets/images/products/product8.jpg";
+import four from "../../assets/images/products/product11.jpg";
+import five from "../../assets/images/products/product12.jpg";
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import Ratings from "../../Components/Ratings/Ratings";
+import ProductCard from "../../Components/ProductCard/ProductCard";
 const ProductDetails = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch("products.json")
+      .then((res) => res.json())
+      .then((data) => setProducts(data));
+  }, []);
   return (
     <div>
-      <div className="container grid grid-cols-2 gap-6">
+      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div>
-          <img
-            src="/assets/images/products/product9.jpg"
-            alt=""
-            className="w-full"
-          />
+          <img src={mainImg} alt="" className="w-full" />
           <div className="grid grid-cols-5 gap-4 mt-4">
             <img
-              src="/assets/images/products/product9.jpg"
+              src={one}
               alt=""
               className="w-full cursor-pointer border border-primary"
             />
-            <img
-              src="/assets/images/products/product1.jpg"
-              alt=""
-              className="w-full cursor-pointer"
-            />
-            <img
-              src="/assets/images/products/product8.jpg"
-              alt=""
-              className="w-full cursor-pointer"
-            />
-            <img
-              src="/assets/images/products/product12.jpg"
-              alt=""
-              className="w-full cursor-pointer"
-            />
-            <img
-              src="/assets/images/products/product11.jpg"
-              alt=""
-              className="w-full cursor-pointer"
-            />
+            <img src={two} alt="" className="w-full cursor-pointer" />
+            <img src={three} alt="" className="w-full cursor-pointer" />
+            <img src={four} alt="" className="w-full cursor-pointer" />
+            <img src={five} alt="" className="w-full cursor-pointer" />
           </div>
         </div>
         {/* <!-- product big image end  --> */}
@@ -47,21 +42,7 @@ const ProductDetails = () => {
           </h2>
           <div className="flex items-center mb-4">
             <div className="flex gap-1 text-sm text-yellow-400">
-              <span>
-                <i className="fas fa-star"></i>
-              </span>
-              <span>
-                <i className="fas fa-star"></i>
-              </span>
-              <span>
-                <i className="fas fa-star"></i>
-              </span>
-              <span>
-                <i className="fas fa-star"></i>
-              </span>
-              <span>
-                <i className="fas fa-star"></i>
-              </span>
+              <Ratings ratings={5} />
             </div>
             <div className="text-xs text-gray-500 ml-3">(150 Reviews)</div>
           </div>
@@ -226,39 +207,39 @@ const ProductDetails = () => {
           {/* <!-- quantity section end  --> */}
           {/* <!-- add cart and wishlist button start   --> */}
           <div className="flex gap-3 border-b border-gray-200 pb-5 mt-6">
-            <a
+            <button
               href=""
               className="bg-primary border border-primary text-white px-8 py-2 font-medium rounded uppercase flex items-center gap-2 hover:bg-transparent hover:text-primary transition"
             >
               <i className="fas fa-shopping-bag"></i> Add to cart
-            </a>
-            <a
+            </button>
+            <button
               href=""
               className="border border-gray-300 text-gray-600 px-8 py-2 font-medium rounded uppercase flex items-center gap-2 hover:text-primary transition"
             >
               <i className="fa fa-heart"></i> wishlist
-            </a>
+            </button>
           </div>
           {/* <!-- add cart and wishlist button end   --> */}
           {/* <!-- social icon start  --> */}
           <div className="flex gap-3 mt-4">
             <a
-              href=""
+              href="/"
               className="text-gray-400 h-8 w-8 rounded-full border border-gray-300 flex items-center justify-center hover:text-gray-500 transition"
             >
-              <i className="fab fa-facebook-f"></i>
+              <FaFacebookF />
             </a>
             <a
-              href=""
+              href="/"
               className="text-gray-400 h-8 w-8 rounded-full border border-gray-300 flex items-center justify-center hover:text-gray-500 transition"
             >
-              <i className="fab fa-twitter"></i>
+              <FaTwitter />
             </a>
             <a
-              href=""
+              href="/"
               className="text-gray-400 h-8 w-8 rounded-full border border-gray-300 flex items-center justify-center hover:text-gray-500 transition"
             >
-              <i className="fab fa-instagram"></i>
+              <FaInstagram />
             </a>
           </div>
           {/* <!-- social icon end --> */}
@@ -268,11 +249,11 @@ const ProductDetails = () => {
       {/* <!-- product view section end  --> */}
 
       {/* <!-- product details view start  --> */}
-      <div className="container pb-16">
+      <div className="container pb-16 mt-5 lg:mt-0">
         <h3 className="border-b border-gray-200 font-roboto text-gray-800 pb-3 font-medium capitalize">
           Product details
         </h3>
-        <div className="w-3/5 pt-6">
+        <div className="w-full lg:w-3/5 pt-6">
           <div className="text-gray-600 space-y-3 text-justify">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -325,275 +306,10 @@ const ProductDetails = () => {
         <h1 className="text-3xl font-medium text-gray-800 uppercase mb-6">
           Related Product
         </h1>
-        <div className="grid grid-cols-4 gap-6">
-          {/* <!-- single product start  --> */}
-          <div className="bg-white shadow rounded overflow-hidden">
-            {/* <!-- product image start  --> */}
-            <div className="relative group">
-              <img
-                src="/assets/images/products/product9.jpg"
-                alt=""
-                className="w-full"
-              />
-              {/* <!-- invisible group-hover:visible transition duration-1000 opactiy badh e ei vabeo kora jay tobe transition   --> */}
-              <div className="absolute inset-0 bg-black bg-opacity-40 flex justify-center items-center gap-2 opacity-0 group-hover:opacity-100 transition">
-                <a
-                  href=""
-                  className="text-white text-lg w-9 h-9 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
-                >
-                  <i className="fas fa-search"></i>
-                </a>
-                <a
-                  href=""
-                  className="text-white text-lg w-9 h-9 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
-                >
-                  <i className="far fa-heart"></i>
-                </a>
-              </div>
-            </div>
-            {/* <!-- product image end  --> */}
-            {/* <!-- product content start  --> */}
-            <div className="pt-4 pb-3 px-4">
-              <a href="#">
-                <h4 className="font-roboto uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">
-                  Guyer Chair
-                </h4>
-              </a>
-              <div className="flex items-baseline mb-1 space-x-2 font-roboto">
-                <p className="text-xl text-primary font-semibold">$45.00</p>
-                <p className="text-sm text-gray-400 line-through">$55.00</p>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="flex gap-1 text-sm text-yellow-400">
-                  <span>
-                    <i className="fas fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fas fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fas fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fas fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fas fa-star"></i>
-                  </span>
-                </div>
-                <p className="text-gray-500 text-xs ml-3">(150)</p>
-              </div>
-            </div>
-            {/* <!-- product content end  --> */}
-            <a
-              href="#"
-              className="block w-full border border-primary py-1 text-center text-white bg-primary rounded-b hover:bg-transparent hover:text-primary transition"
-            >
-              Add to Cart
-            </a>
-          </div>
-          {/* <!-- single product end  --> */}
-          {/* <!-- single product start  --> */}
-          <div className="bg-white shadow rounded overflow-hidden">
-            {/* <!-- product image start  --> */}
-            <div className="relative group">
-              <img
-                src="/assets/images/products/product11.jpg"
-                alt=""
-                className="w-full"
-              />
-              {/* <!-- invisible group-hover:visible transition duration-1000 opactiy badh e ei vabeo kora jay tobe transition   --> */}
-              <div className="absolute inset-0 bg-black bg-opacity-40 flex justify-center items-center gap-2 opacity-0 group-hover:opacity-100 transition">
-                <a
-                  href=""
-                  className="text-white text-lg w-9 h-9 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
-                >
-                  <i className="fas fa-search"></i>
-                </a>
-                <a
-                  href=""
-                  className="text-white text-lg w-9 h-9 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
-                >
-                  <i className="far fa-heart"></i>
-                </a>
-              </div>
-            </div>
-            {/* <!-- product image end  --> */}
-            {/* <!-- product content start  --> */}
-            <div className="pt-4 pb-3 px-4">
-              <a href="#">
-                <h4 className="font-roboto uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">
-                  Bed
-                </h4>
-              </a>
-              <div className="flex items-baseline mb-1 space-x-2 font-roboto">
-                <p className="text-xl text-primary font-semibold">$45.00</p>
-                <p className="text-sm text-gray-400 line-through">$55.00</p>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="flex gap-1 text-sm text-yellow-400">
-                  <span>
-                    <i className="fas fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fas fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fas fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fas fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fas fa-star"></i>
-                  </span>
-                </div>
-                <p className="text-gray-500 text-xs ml-3">(150)</p>
-              </div>
-            </div>
-            {/* <!-- product content end  --> */}
-            <a
-              href="#"
-              className="block w-full border border-primary py-1 text-center text-white bg-primary rounded-b hover:bg-transparent hover:text-primary transition"
-            >
-              Add to Cart
-            </a>
-          </div>
-          {/* <!-- single product end  --> */}
-          {/* <!-- single product start  --> */}
-          <div className="bg-white shadow rounded overflow-hidden">
-            {/* <!-- product image start  --> */}
-            <div className="relative group">
-              <img
-                src="/assets/images/products/product3.jpg"
-                alt=""
-                className="w-full"
-              />
-              {/* <!-- invisible group-hover:visible transition duration-1000 opactiy badh e ei vabeo kora jay tobe transition   --> */}
-              <div className="absolute inset-0 bg-black bg-opacity-40 flex justify-center items-center gap-2 opacity-0 group-hover:opacity-100 transition">
-                <a
-                  href=""
-                  className="text-white text-lg w-9 h-9 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
-                >
-                  <i className="fas fa-search"></i>
-                </a>
-                <a
-                  href=""
-                  className="text-white text-lg w-9 h-9 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
-                >
-                  <i className="far fa-heart"></i>
-                </a>
-              </div>
-            </div>
-            {/* <!-- product image end  --> */}
-            {/* <!-- product content start  --> */}
-            <div className="pt-4 pb-3 px-4">
-              <a href="#">
-                <h4 className="font-roboto uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">
-                  Mattress
-                </h4>
-              </a>
-              <div className="flex items-baseline mb-1 space-x-2 font-roboto">
-                <p className="text-xl text-primary font-semibold">$45.00</p>
-                <p className="text-sm text-gray-400 line-through">$55.00</p>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="flex gap-1 text-sm text-yellow-400">
-                  <span>
-                    <i className="fas fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fas fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fas fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fas fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fas fa-star"></i>
-                  </span>
-                </div>
-                <p className="text-gray-500 text-xs ml-3">(150)</p>
-              </div>
-            </div>
-            {/* <!-- product content end  --> */}
-            <a
-              href="#"
-              className="block w-full border border-primary py-1 text-center text-white bg-primary rounded-b hover:bg-transparent hover:text-primary transition"
-            >
-              Add to Cart
-            </a>
-          </div>
-          {/* <!-- single product end  --> */}
-          {/* <!-- single product start  --> */}
-          <div className="bg-white shadow rounded overflow-hidden">
-            {/* <!-- product image start  --> */}
-            <div className="relative group">
-              <img
-                src="/assets/images/products/product1.jpg"
-                alt=""
-                className="w-full"
-              />
-              {/* <!-- invisible group-hover:visible transition duration-1000 opactiy badh e ei vabeo kora jay tobe transition   --> */}
-              <div className="absolute inset-0 bg-black bg-opacity-40 flex justify-center items-center gap-2 opacity-0 group-hover:opacity-100 transition">
-                <a
-                  href=""
-                  className="text-white text-lg w-9 h-9 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
-                >
-                  <i className="fas fa-search"></i>
-                </a>
-                <a
-                  href=""
-                  className="text-white text-lg w-9 h-9 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
-                >
-                  <i className="far fa-heart"></i>
-                </a>
-              </div>
-            </div>
-            {/* <!-- product image end  --> */}
-            {/* <!-- product content start  --> */}
-            <div className="pt-4 pb-3 px-4">
-              <a href="#">
-                <h4 className="font-roboto uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">
-                  Dual Sofa
-                </h4>
-              </a>
-              <div className="flex items-baseline mb-1 space-x-2 font-roboto">
-                <p className="text-xl text-primary font-semibold">$45.00</p>
-                <p className="text-sm text-gray-400 line-through">$55.00</p>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="flex gap-1 text-sm text-yellow-400">
-                  <span>
-                    <i className="fas fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fas fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fas fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fas fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fas fa-star"></i>
-                  </span>
-                </div>
-                <p className="text-gray-500 text-xs ml-3">(150)</p>
-              </div>
-            </div>
-            {/* <!-- product content end  --> */}
-            <a
-              href="#"
-              className="block w-full border border-primary py-1 text-center text-white bg-primary rounded-b hover:bg-transparent hover:text-primary transition"
-            >
-              Add to Cart
-            </a>
-          </div>
-          {/* <!-- single product end  --> */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product}></ProductCard>
+          ))}
         </div>
       </div>
       {/* <!-- Related Product section end  --> */}
