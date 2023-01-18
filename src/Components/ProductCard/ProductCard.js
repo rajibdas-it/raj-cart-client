@@ -4,7 +4,7 @@ import { BsHeart } from "react-icons/bs";
 import Ratings from "../Ratings/Ratings";
 
 const ProductCard = ({ product }) => {
-  console.log(product);
+  // console.log(product);
   const {
     id,
     categoryId,
