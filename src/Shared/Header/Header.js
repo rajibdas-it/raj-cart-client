@@ -1,18 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
 import { BsCart3, BsHeart } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaUserAlt } from "react-icons/fa";
+import logo from "../../assets/images/logo.svg";
 
 const Header = () => {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    fetch("categories.json")
+      .then((res) => res.json())
+      .then((data) => setCategories(data));
+  }, []);
+
+  console.log(categories);
   return (
     <div>
       <header className="py-4 shadow-sm bg-white hidden lg:block">
         <div className="container flex items-center justify-evenly">
           <a href="/">
-            <img src="/assets/images/logo.svg" className="w-32" alt="" />
+            <img src={logo} className="w-32" alt="" />
           </a>
 
           <div className="w-full max-w-xl relative flex">
@@ -108,86 +118,17 @@ const Header = () => {
               <GiHamburgerMenu />
             </span>
             <span className="capitalize ml-2 text-white">all categories</span>
-
             <div className="absolute w-full left-0 top-full bg-white shadow-md py-3 divide-y divide-gray-300 divide-dashed opacity-0 group-hover:opacity-100 transition duration-300 hidden group-hover:block">
-              <a
-                href="/"
-                className="flex items-center px-6 py-3 hover:bg-gray-100 transition"
-              >
-                <img
-                  src="./assets/images/icons/bed.svg"
-                  alt="sofa"
-                  className="w-5 h-5 object-contain"
-                />
-                <span className="ml-6 text-gray-600 text-sm capitalize">
-                  Bed
-                </span>
-              </a>
-              <a
-                href="/"
-                className="flex items-center px-6 py-3 hover:bg-gray-100 transition"
-              >
-                <img
-                  src="./assets/images/icons/sofa.svg"
-                  alt="sofa"
-                  className="w-5 h-5 object-contain"
-                />
-                <span className="ml-6 text-gray-600 text-sm capitalize">
-                  sofa
-                </span>
-              </a>
-              <a
-                href="/"
-                className="flex items-center px-6 py-3 hover:bg-gray-100 transition"
-              >
-                <img
-                  src="./assets/images/icons/office.svg"
-                  alt="sofa"
-                  className="w-5 h-5 object-contain"
-                />
-                <span className="ml-6 text-gray-600 text-sm capitalize">
-                  Office
-                </span>
-              </a>
-              <a
-                href="/"
-                className="flex items-center px-6 py-3 hover:bg-gray-100 transition"
-              >
-                <img
-                  src="./assets/images/icons/terrace.svg"
-                  alt="sofa"
-                  className="w-5 h-5 object-contain"
-                />
-                <span className="ml-6 text-gray-600 text-sm capitalize">
-                  Outdoor
-                </span>
-              </a>
-              <a
-                href="/"
-                className="flex items-center px-6 py-3 hover:bg-gray-100 transition"
-              >
-                <img
-                  src="./assets/images/icons/bed-2.svg"
-                  alt="sofa"
-                  className="w-5 h-5 object-contain"
-                />
-                <span className="ml-6 text-gray-600 text-sm capitalize">
-                  Mattress
-                </span>
-              </a>
-              <a
-                href="/"
-                className="flex items-center px-6 py-3 hover:bg-gray-100 transition"
-              >
-                <img
-                  src="./assets/images/icons/restaurant.svg"
-                  alt="sofa"
-                  className="w-5 h-5 object-contain"
-                />
-                <span className="ml-6 text-gray-600 text-sm capitalize">
-                  Dinning
-                </span>
-              </a>
+              {categories.map((category) => (
+                <a
+                  href="/"
+                  className="flex items-center px-6 py-3 hover:bg-gray-100 hover:text-red-500 transition"
+                >
+                  <span className="ml-6 text-gray-600 text-sm capitalize">
+                    {category.categoryName}
+                  </span>
+                </a>
+              ))}
             </div>
           </div>
 
@@ -207,7 +148,7 @@ const Header = () => {
               </Link>
             </div>
 
-            <div className="flex items-center">
+            <div className="flex items-center relative">
               <Link
                 to="/login"
                 className="capitalize text-gray-200 hover:text-white transition"

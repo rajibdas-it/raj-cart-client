@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "categoryName": "Bed",
+    "img": "https://i.ibb.co/h2zQw35/1-bed.jpg"
+  },
+  {
+    "id": 2,
+    "categoryName": "Sofa",
+    "img": "https://i.ibb.co/FVmNM4n/2-sofa.jpg"
+  },
+  {
+    "id": 3,
+    "categoryName": "Office",
+    "img": "https://i.ibb.co/rvPbVdv/3-office.jpg"
+  },
+  {
+    "id": 4,
+    "categoryName": "Outdoor",
+    "img": "https://i.ibb.co/fYrHrgD/4-outdoor.jpg"
+  },
+  {
+    "id": 5,
+    "categoryName": "Matress",
+    "img": "https://i.ibb.co/QmbCyQg/5-matress.jpg"
+  },
+  {
+    "id": 6,
+    "categoryName": "Dinning",
+    "img": "https://i.ibb.co/8g9vDz6/6-dinning.jpg"
+  }
+]

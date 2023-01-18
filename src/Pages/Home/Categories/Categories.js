@@ -1,42 +1,23 @@
-import React from "react";
-import bedroom from "../../../assets/images/category/category-1.jpg";
-import sofa from "../../../assets/images/category/category-5.jpg";
-import office from "../../../assets/images/category/category-3.jpg";
+import React, { useEffect, useState } from "react";
+import Category from "../Category/Category";
 
 const Categories = () => {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    fetch("categories.json")
+      .then((res) => res.json())
+      .then((data) => setCategories(data));
+  }, []);
   return (
-    <div class="container py-16">
-      <h2 class="text-roboto text-2xl font-medium text-gray-800 uppercase mb-6">
+    <div className="container py-16">
+      <h2 className="text-roboto text-2xl font-medium text-gray-800 uppercase mb-6">
         shop by category
       </h2>
-      <div class="grid grid-cols-2 lg:grid-cols-3 gap-3">
-        <div class="relative rounded-sm overflow-hidden group">
-          <img src={bedroom} alt="" class="w-full" />
-          <a
-            href="/"
-            class="absolute inset-0 bg-black bg-opacity-40 flex justify-center items-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-50 transition"
-          >
-            Bedroom
-          </a>
-        </div>
-        <div class="relative rounded-sm overflow-hidden group">
-          <img src={sofa} alt="" class="w-full" />
-          <a
-            href="/"
-            class="absolute inset-0 bg-black bg-opacity-40 flex justify-center items-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-50 transition"
-          >
-            Sofa
-          </a>
-        </div>
-        <div class="relative rounded-sm overflow-hidden group">
-          <img src={office} alt="" class="w-full" />
-          <a
-            href="/"
-            class="absolute inset-0 bg-black bg-opacity-40 flex justify-center items-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-50 transition"
-          >
-            Office
-          </a>
-        </div>
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
+        {categories.map((category) => (
+          <Category key={category.id} category={category}></Category>
+        ))}
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import bankList from "../../assets/images/methods.png";
+import logo from "../../assets/images/logo.svg";
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
       <footer class="bg-white pt-16 pb-12 border-t border-gray-100">
         <div class="container grid grid-cols-1 lg:grid-cols-3">
           <div class="col-span-1 space-y-8">
-            <img src="/assets/images/logo.svg" alt="" />
+            <img src={logo} alt="" />
             <p class="text-gray-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
@@ -161,7 +162,7 @@ const Footer = () => {
       </footer>
 
       <div class="bg-gray-800 py-4">
-        <div class="container flex sm:flex-col lg:flex-row justify-between items-center">
+        <div class="container flex flex-col lg:flex-row justify-between items-center gap-3">
           <p class="text-white">&copy; RAFCART - All Rights Reserved</p>
           <img src={bankList} alt="" class="h-5" />
         </div>
