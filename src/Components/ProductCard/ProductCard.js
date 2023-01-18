@@ -2,6 +2,7 @@ import React from "react";
 import { FiSearch } from "react-icons/fi";
 import { BsHeart } from "react-icons/bs";
 import Ratings from "../Ratings/Ratings";
+import { Link } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
   // console.log(product);
@@ -37,11 +38,11 @@ const ProductCard = ({ product }) => {
       </div>
       <div class="pt-4 pb-3 px-4">
         {/* eikahne single product er url hobe. jetay click korle product er details e niye jabe.  */}
-        <a href="/">
+        <Link to="/product-details">
           <h4 class="font-roboto uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">
             {productName}
           </h4>
-        </a>
+        </Link>
         <div class="flex items-baseline mb-1 space-x-2 font-roboto">
           {discountPrice && (
             <p class="text-xl text-primary font-semibold">${discountPrice}</p>
