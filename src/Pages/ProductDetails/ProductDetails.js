@@ -209,13 +209,13 @@ const ProductDetails = () => {
           <div className="flex gap-3 border-b border-gray-200 pb-5 mt-6">
             <button
               href=""
-              className="bg-primary border border-primary text-white px-8 py-2 font-medium rounded uppercase flex items-center gap-2 hover:bg-transparent hover:text-primary transition"
+              className="bg-primary border border-primary text-white px-4 md:px-8 py-2 font-medium rounded uppercase flex items-center gap-2 hover:bg-transparent hover:text-primary transition"
             >
               <i className="fas fa-shopping-bag"></i> Add to cart
             </button>
             <button
               href=""
-              className="border border-gray-300 text-gray-600 px-8 py-2 font-medium rounded uppercase flex items-center gap-2 hover:text-primary transition"
+              className="border border-gray-300 text-gray-600 px-4 md:px-8 py-2 font-medium rounded uppercase flex items-center gap-2 hover:text-primary transition"
             >
               <i className="fa fa-heart"></i> wishlist
             </button>
