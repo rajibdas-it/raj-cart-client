@@ -8,6 +8,8 @@ import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 import Register from "../Pages/Register/Register";
 import Shop from "../Pages/Shop/Shop";
 import Wishlist from "../Pages/UserDashboard/Wishlist/Wishlist";
+import Checkout from "../Pages/Checkout/Checkout";
+import Cart from "../Pages/Cart/Cart";
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +22,8 @@ export const router = createBrowserRouter([
       { path: "/product-details", element: <ProductDetails></ProductDetails> },
       { path: "/login", element: <Login></Login> },
       { path: "/register", element: <Register></Register> },
+      { path: "/checkout", element: <Checkout></Checkout> },
+      { path: "/cart", element: <Cart></Cart> },
     ],
   },
   {
