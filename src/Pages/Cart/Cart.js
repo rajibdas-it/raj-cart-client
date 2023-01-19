@@ -1,6 +1,7 @@
 import React from "react";
 import prodImg1 from "../../assets/images/products/product2.jpg";
 import { FaTrash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   return (
@@ -108,12 +109,12 @@ const Cart = () => {
             <p>$960</p>
           </div>
           <div className="mt-2">
-            <a
-              href="/"
+            <Link
+              to="/checkout"
               class="block w-full border border-primary pt-1 text-center text-white bg-primary rounded-b hover:bg-transparent hover:text-primary transition"
             >
               Place Order
-            </a>
+            </Link>
           </div>
         </div>
       </div>

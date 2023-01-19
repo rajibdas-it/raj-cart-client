@@ -1,5 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import avatar from "../../../assets/images/avatar.png";
+import {
+  FaAddressCard,
+  FaGift,
+  FaCreditCard,
+  FaPowerOff,
+} from "react-icons/fa";
+import { BsHeart } from "react-icons/bs";
 
 const UserDashboardSidebar = () => {
   return (
@@ -18,78 +26,76 @@ const UserDashboardSidebar = () => {
         </div>
       </div>
       <div class="mt-6 bg-white shadow rounded p-4 divide-y divide-gray-200 text-gray-600">
-        {/* <!-- single link start  --> */}
+        {/* <!-- Order history start  --> */}
         <div class="pl-8 pb-4 space-y-1">
-          <a
-            href="/"
+          <p class="block text-xl font-semibold capitalize relative transition">
+            <span class="absolute -left-8 top-1 text-base">
+              <FaGift className="w-6 h-5" />
+            </span>
+            My Order History
+          </p>
+          <Link
+            to="/user/order-history"
             class="text-primary block font-medium capitalize relative transition"
           >
             <span class="absolute -left-8 top-0 text-base">
               <i class="far fa-address-card"></i>
             </span>
-            Manage Account
+            My Order
+          </Link>
+          <a
+            href="/"
+            class="hover:text-primary block capitalize relative transition"
+          >
+            My Returns
           </a>
           <a
             href="/"
             class="hover:text-primary block capitalize relative transition"
           >
-            My Order history
+            My Cancellations
           </a>
           <a
             href="/"
             class="hover:text-primary block capitalize relative transition"
           >
-            manage address
-          </a>
-          <a
-            href="/"
-            class="hover:text-primary block capitalize relative transition"
-          >
-            Change Password
+            My Review
           </a>
         </div>
-        {/* <!-- single link end  --> */}
-        {/* <!-- single link start  --> */}
-        <div class="pl-8 space-y-1 py-4">
-          <a
-            href="/"
-            class="hover:text-primary block font-medium capitalize relative transition"
-          >
-            <span class="absolute -left-8 top-0 text-base">
-              <i class="far fa-address-card"></i>
+        {/* <!-- Order history end  --> */}
+
+        {/* <!-- Wishlist Section start  --> */}
+        <div class="pl-8 pb-4 space-y-1 py-4">
+          <p class="block text-xl font-semibold capitalize relative transition">
+            <span class="absolute -left-8 top-1 text-base">
+              <BsHeart className="w-6 h-5" />
             </span>
-            Order History
-          </a>
-          <a
-            href="/"
+            My Wishlist
+          </p>
+
+          <Link
+            to="/user/wishlist"
             class="hover:text-primary block capitalize relative transition"
           >
-            My Order history
-          </a>
-          <a
-            href="/"
-            class="hover:text-primary block capitalize relative transition"
-          >
-            manage address
-          </a>
-          <a
-            href="/"
-            class="hover:text-primary block capitalize relative transition"
-          >
-            Change Password
-          </a>
+            Wishlist
+          </Link>
         </div>
-        {/* <!-- single link end  --> */}
-        {/* <!-- single link start  --> */}
-        <div class="pl-8 space-y-1 py-4">
+        {/* <!-- Wishlist Section end  --> */}
+
+        {/* <!-- Payment Section start  --> */}
+        <div class="pl-8 pb-4 space-y-1 py-4">
+          <p class="block text-xl font-semibold capitalize relative transition">
+            <span class="absolute -left-8 top-1 text-base">
+              <FaCreditCard className="w-6 h-5" />
+            </span>
+            Payment Method
+          </p>
+
           <a
             href="/"
-            class="hover:text-primary block font-medium capitalize relative transition"
+            class="hover:text-primary block capitalize relative transition"
           >
-            <span class="absolute -left-8 top-0 text-base">
-              <i class="far fa-address-card"></i>
-            </span>
-            Payment history
+            My Cards
           </a>
           <a
             href="/"
@@ -98,33 +104,48 @@ const UserDashboardSidebar = () => {
             Voucher
           </a>
         </div>
-        {/* <!-- single link end  --> */}
-        {/* <!-- single link start  --> */}
-        <div class="pl-8 space-y-1 py-4">
+        {/* <!-- Payment Section end  --> */}
+
+        {/* <!-- Manage Account Section start  --> */}
+        <div class="pl-8 pb-4 space-y-1 py-4">
+          <p class="block text-xl font-semibold capitalize relative transition">
+            <span class="absolute -left-8 top-1 text-base">
+              <FaAddressCard className="w-6 h-5" />
+            </span>
+            Manage My Account
+          </p>
+
           <a
             href="/"
-            class="hover:text-primary block font-medium capitalize relative transition"
+            class="hover:text-primary block capitalize relative transition"
           >
-            <span class="absolute -left-8 top-0 text-base">
-              <i class="far fa-address-card"></i>
-            </span>
-            My Wishlist
+            Profile Information
+          </a>
+          <a
+            href="/"
+            class="hover:text-primary block capitalize relative transition"
+          >
+            Manage Address
+          </a>
+          <a
+            href="/"
+            class="hover:text-primary block capitalize relative transition"
+          >
+            Change Password
           </a>
         </div>
-        {/* <!-- single link end  --> */}
-        {/* <!-- single link start  --> */}
+        {/* <!-- Manage Account end  --> */}
+
+        {/* <!-- Logout Button start  --> */}
         <div class="pl-8 space-y-1 py-4">
-          <a
-            href="/"
-            class="hover:text-primary block font-medium capitalize relative transition"
-          >
-            <span class="absolute -left-8 top-0 text-base">
-              <i class="far fa-address-card"></i>
+          <button class="block text-xl font-semibold capitalize relative transition">
+            <span class="absolute -left-8 top-1 text-base">
+              <FaPowerOff className="w-6 h-5" />
             </span>
             Logout
-          </a>
+          </button>
         </div>
-        {/* <!-- single link end  --> */}
+        {/* <!-- Logout Button end  --> */}
       </div>
     </div>
   );

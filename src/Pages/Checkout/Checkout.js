@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Checkout = () => {
   return (
@@ -141,17 +142,17 @@ const Checkout = () => {
             class="text-gray-600 ml-3 cursor-pointer text-sm"
           >
             Agree to our
-            <a href="#" class="text-primary">
-              terms & conditions
-            </a>
+            <Link to="/" class="text-primary">
+              <span> terms & conditions</span>
+            </Link>
           </label>
         </div>
-        <a
-          href="#"
+        <Link
+          to="/"
           class="block w-full border border-primary py-1 text-center text-white bg-primary rounded-b hover:bg-transparent hover:text-primary transition"
         >
           Place Order
-        </a>
+        </Link>
       </div>
       {/* <!-- sidebar end  --> */}
     </div>
