@@ -8,7 +8,7 @@ const UserDashboard = () => {
   return (
     <div>
       <Header />
-      <div class="container grid grid-cols-12 items-start gap-6 pt-4 pb-16">
+      <div class="container grid grid-cols-1 lg:grid-cols-12 items-start gap-6 pt-4 pb-16">
         <div class="col-span-3 hidden lg:block">
           <UserDashboardSidebar></UserDashboardSidebar>
         </div>

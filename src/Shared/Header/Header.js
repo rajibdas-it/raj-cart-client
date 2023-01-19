@@ -11,7 +11,7 @@ const Header = () => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch("categories.json")
+    fetch("http://localhost:5000/category")
       .then((res) => res.json())
       .then((data) => setCategories(data));
   }, []);
