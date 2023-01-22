@@ -3,9 +3,9 @@ import addImg from "../../../assets/images/offer.jpg";
 
 const AddBanner = () => {
   return (
-    <div class="container pb-16">
+    <div className="container pb-16">
       <a href="/">
-        <img src={addImg} alt="" class="w-full" />
+        <img src={addImg} alt="" className="w-full" />
       </a>
     </div>
   );

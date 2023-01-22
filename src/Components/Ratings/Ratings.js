@@ -3,7 +3,7 @@ import { AiFillStar } from "react-icons/ai";
 const Ratings = ({ ratings }) => {
   return (
     <>
-      {Array.apply(null, Array(Math.round(ratings))).map((index, item) => (
+      {Array.apply(null, Array(Math.round(ratings))).map((item, index) => (
         <span key={index}>
           <AiFillStar />
         </span>

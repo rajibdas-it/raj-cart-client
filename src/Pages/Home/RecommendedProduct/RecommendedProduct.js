@@ -10,13 +10,13 @@ const RecommendedProduct = () => {
       .then((data) => setProducts(data));
   }, []);
   return (
-    <div class="container pb-16">
-      <h1 class="text-3xl font-medium text-gray-800 uppercase mb-6">
+    <div className="container pb-16">
+      <h1 className="text-3xl font-medium text-gray-800 uppercase mb-6">
         recommended for you
       </h1>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {products.map((product) => (
-          <ProductCard key={product.id} product={product}></ProductCard>
+          <ProductCard key={product._id} product={product}></ProductCard>
         ))}
       </div>
     </div>

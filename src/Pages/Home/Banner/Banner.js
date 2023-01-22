@@ -2,9 +2,9 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div class="bg-banner bg-cover bg-center bg-no-repeat p-6 lg:p-3">
-      <div class="container">
-        <h1 class="text-2xl md:text-3xl lg:text-6xl font-roboto text-gray-800 font-medium mb-4 capitalize">
+    <div className="bg-banner bg-cover bg-center bg-no-repeat p-6 lg:p-3">
+      <div className="container">
+        <h1 className="text-2xl md:text-3xl lg:text-6xl font-roboto text-gray-800 font-medium mb-4 capitalize">
           Best Collection for <br />
           home decoration
         </h1>
@@ -16,8 +16,8 @@ const Banner = () => {
             fuga sed.
           </span>
         </p>
-        <div class="mt-6 lg:mt-12">
-          <button class="text-white bg-primary px-8 py-3 border border-primary font-medium hover:bg-transparent hover:text-primary transition duration-200 rounded-md">
+        <div className="mt-6 lg:mt-12">
+          <button className="text-white bg-primary px-8 py-3 border border-primary font-medium hover:bg-transparent hover:text-primary transition duration-200 rounded-md">
             Shop Now
           </button>
         </div>

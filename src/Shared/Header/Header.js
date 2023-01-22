@@ -6,8 +6,12 @@ import { BsCart3, BsHeart } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaUserAlt } from "react-icons/fa";
 import logo from "../../assets/images/logo.svg";
+import { useContext } from "react";
+import { CartContext } from "../../Context/CartProvider";
 
 const Header = () => {
+  const { cartItems } = useContext(CartContext);
+
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -62,7 +66,7 @@ const Header = () => {
               </div>
               <div className="text-xs leading-3">Cart</div>
               <span className="absolute -right-3 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs">
-                8
+                {cartItems.length}
               </span>
             </Link>
             <Link
@@ -123,7 +127,7 @@ const Header = () => {
             <div className="absolute w-full left-0 top-full bg-white shadow-md py-3 divide-y divide-gray-300 divide-dashed opacity-0 group-hover:opacity-100 transition duration-300 hidden group-hover:block">
               {categories.map((category) => (
                 <a
-                  key={category.id}
+                  key={category._id}
                   href="/"
                   className="flex items-center px-6 py-3 hover:bg-gray-100 hover:text-red-500 transition"
                 >
