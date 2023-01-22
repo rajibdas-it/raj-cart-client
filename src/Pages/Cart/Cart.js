@@ -6,6 +6,14 @@ import CartDetails from "./CartDetails";
 
 const Cart = () => {
   const { cartItems } = useContext(CartContext);
+
+  const subTotal = cartItems.reduce(
+    (acc, current) => acc + current.price * current.orderQty,
+    0
+  );
+  const deliveryCharge = 50;
+  const tax = subTotal * 0.1;
+  const total = subTotal + deliveryCharge + tax;
   return (
     <div className="container pb-16 mt-10 grid grid-cols-12 gap-6">
       <div className="col-span-9">
@@ -48,19 +56,19 @@ const Cart = () => {
           </h4>
           <div className="flex justify-between text-gray-800 font-medium pt-3 text-sm capitalize">
             <h4 className="font-semibold">Subtotal</h4>
-            <p>$960</p>
+            <p>${subTotal.toFixed(2)}</p>
           </div>
           <div className="flex justify-between text-gray-800 font-medium py-1 text-sm capitalize">
             <h4>Delivery</h4>
-            <p>free</p>
+            <p>${deliveryCharge.toFixed(2)}</p>
           </div>
           <div className="flex justify-between border-b border-gray-200 text-gray-800 font-medium py-1 text-sm capitalize">
             <h4>Tax</h4>
-            <p>free</p>
+            <p>${tax.toFixed(2)}</p>
           </div>
           <div className="flex justify-between text-gray-800  py-3 uppercase text-sm font-bold">
             <h4 className="">Total</h4>
-            <p>$960</p>
+            <p>${total.toFixed(2)}</p>
           </div>
           <div className="mt-2">
             <Link

@@ -3,7 +3,6 @@ import { FiSearch } from "react-icons/fi";
 import { BsHeart } from "react-icons/bs";
 import Ratings from "../Ratings/Ratings";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import { useContext } from "react";
 import { CartContext } from "../../Context/CartProvider";
 
