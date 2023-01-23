@@ -1,6 +1,39 @@
 import React from "react";
+import { useContext } from "react";
+import { AuthContext } from "../../Context/UserContext";
 
 const Login = () => {
+  const { userLogin, signInUpWithGoogle } = useContext(AuthContext);
+
+  const handleUserLogin = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const userEmail = form.email.value;
+    const userPassword = form.password.value;
+    userLogin(userEmail, userPassword)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
+
+  const handleGoogleSignIn = () => {
+    signInUpWithGoogle()
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
+
+  const handleFacebookSignIn = () => {
+    console.log("clicked on facebook signup button");
+  };
   return (
     <div className="container py-16">
       <div className="max-w-lg mx-auto shadow px-6 py-7 rounded overflow-hidden">
@@ -8,12 +41,13 @@ const Login = () => {
         <p className="text-gray-600 mb-6 text-sm">
           Login if you are a returing customer
         </p>
-        <form action="">
+        <form onSubmit={handleUserLogin}>
           <div className="space-y-4">
             <div>
               <label className="text-gray-600 mb-2 block">Email Address</label>
               <input
                 type="email"
+                name="email"
                 className="w-full block border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded focus:ring-0 focus:border-primary placeholder-gray-400"
                 placeholder="email"
               />
@@ -22,6 +56,7 @@ const Login = () => {
               <label className="text-gray-600 mb-2 block">Password</label>
               <input
                 type="password"
+                name="password"
                 className="w-full block border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded focus:ring-0 focus:border-primary placeholder-gray-400"
                 placeholder="password"
               />
@@ -46,7 +81,10 @@ const Login = () => {
             </a>
           </div>
           <div className="mt-4">
-            <button className="block w-full bg-primary text-white border border-primary py-2 rounded text-center hover:bg-transparent hover:text-primary transition font-roboto font-medium cursor-pointer">
+            <button
+              type="submit"
+              className="block w-full bg-primary text-white border border-primary py-2 rounded text-center hover:bg-transparent hover:text-primary transition font-roboto font-medium cursor-pointer"
+            >
               Login
             </button>
           </div>
@@ -59,20 +97,19 @@ const Login = () => {
           <div className="absolute left-0 top-3 w-full border-b-2 border-gray-200"></div>
         </div>
         <div className="flex mt-4 gap-4">
-          <a
-            href="/"
+          <button
+            onClick={handleFacebookSignIn}
             className="w-1/2 py-2 text-center text-white bg-blue-800 rounded font-roboto uppercase font-medium text-sm hover:bg-blue-700"
           >
             Facebook
-          </a>
-          <a
-            href="/"
+          </button>
+          <button
+            onClick={handleGoogleSignIn}
             className="w-1/2 py-2 text-center text-white bg-yellow-600 rounded font-roboto uppercase font-medium text-sm hover:bg-yellow-500"
           >
             google
-          </a>
+          </button>
         </div>
-
         <p className="capitalize mt-4 text-gray-600 text-center text-sm">
           Don't have an account?
           <a href="/sign-up" className="text-primary">
