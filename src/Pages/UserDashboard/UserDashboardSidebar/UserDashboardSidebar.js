@@ -8,8 +8,18 @@ import {
   FaPowerOff,
 } from "react-icons/fa";
 import { BsHeart } from "react-icons/bs";
+import { useContext } from "react";
+import { AuthContext } from "../../../Context/UserContext";
 
 const UserDashboardSidebar = () => {
+  const { userSignOut } = useContext(AuthContext);
+  const handleSignOut = () => {
+    userSignOut()
+      .then(() => {})
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
   return (
     <div>
       <div className="px-4 py-3 shadow flex items-center gap-4">
@@ -138,7 +148,10 @@ const UserDashboardSidebar = () => {
 
         {/* <!-- Logout Button start  --> */}
         <div className="pl-8 space-y-1 py-4">
-          <button className="block text-xl font-semibold capitalize relative transition">
+          <button
+            onClick={handleSignOut}
+            className="block text-xl font-semibold capitalize relative transition"
+          >
             <span className="absolute -left-8 top-1 text-base">
               <FaPowerOff className="w-6 h-5" />
             </span>

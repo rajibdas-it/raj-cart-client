@@ -3,7 +3,8 @@ import { useContext } from "react";
 import { AuthContext } from "../../Context/UserContext";
 
 const Login = () => {
-  const { userLogin, signInUpWithGoogle } = useContext(AuthContext);
+  const { userLogin, signInUpWithGoogle, signInWithFacebook } =
+    useContext(AuthContext);
 
   const handleUserLogin = (event) => {
     event.preventDefault();
@@ -32,7 +33,14 @@ const Login = () => {
   };
 
   const handleFacebookSignIn = () => {
-    console.log("clicked on facebook signup button");
+    signInWithFacebook()
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
   };
   return (
     <div className="container py-16">
