@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import avatar from "../../../assets/images/avatar.png";
 import {
   FaAddressCard,
@@ -12,13 +12,15 @@ import { useContext } from "react";
 import { AuthContext } from "../../../Context/UserContext";
 
 const UserDashboardSidebar = () => {
-  const { userSignOut } = useContext(AuthContext);
+  const { userSignOut, user } = useContext(AuthContext);
+  const navigate = useNavigate();
+  // console.log(user);
   const handleSignOut = () => {
     userSignOut()
-      .then(() => {})
-      .catch((err) => {
-        console.log(err.message);
-      });
+      .then(() => {
+        navigate("/");
+      })
+      .catch(() => {});
   };
   return (
     <div>
@@ -32,7 +34,7 @@ const UserDashboardSidebar = () => {
         </div>
         <div className="flex-grow">
           <p className="text-gray-600">Hello,</p>
-          <h4 className="text-gray-800 font-medium">Rajib Das</h4>
+          <h4 className="text-gray-800 font-medium">{user?.displayName}</h4>
         </div>
       </div>
       <div className="mt-6 bg-white shadow rounded p-4 divide-y divide-gray-200 text-gray-600">

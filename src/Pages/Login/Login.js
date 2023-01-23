@@ -14,7 +14,7 @@ const Login = () => {
     userLogin(userEmail, userPassword)
       .then((result) => {
         const user = result.user;
-        console.log(user);
+        // console.log(user);
       })
       .catch((err) => {
         console.log(err.message);
@@ -25,7 +25,7 @@ const Login = () => {
     signInUpWithGoogle()
       .then((result) => {
         const user = result.user;
-        console.log(user);
+        // console.log(user);
       })
       .catch((err) => {
         console.log(err.message);
@@ -36,7 +36,7 @@ const Login = () => {
     signInWithFacebook()
       .then((result) => {
         const user = result.user;
-        console.log(user);
+        // console.log(user);
       })
       .catch((err) => {
         console.log(err.message);

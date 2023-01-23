@@ -19,7 +19,7 @@ const Register = () => {
       newUserRegistration(email, password)
         .then((result) => {
           const user = result.user;
-          console.log(user);
+          // console.log(user);
         })
         .catch((err) => {
           console.log(err.message);
@@ -31,7 +31,7 @@ const Register = () => {
     signInUpWithGoogle()
       .then((result) => {
         const user = result.user;
-        console.log(user);
+        // console.log(user);
       })
       .catch((err) => {
         console.log(err.message);
@@ -42,7 +42,7 @@ const Register = () => {
     signInWithFacebook()
       .then((result) => {
         const user = result.user;
-        console.log(user);
+        // console.log(user);
       })
       .catch((err) => {
         console.log(err.message);
