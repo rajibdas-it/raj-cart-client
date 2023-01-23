@@ -11,7 +11,7 @@ const Checkout = () => {
         <div className="space-y-4">
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label for="" className="text-gray-600 mb-2 block">
+              <label htmlFor="" className="text-gray-600 mb-2 block">
                 First Name <span className="text-primary">*</span>
               </label>
               <input
@@ -20,7 +20,7 @@ const Checkout = () => {
               />
             </div>
             <div>
-              <label for="" className="text-gray-600 mb-2 block">
+              <label htmlFor="" className="text-gray-600 mb-2 block">
                 Last Name <span className="text-primary">*</span>
               </label>
               <input
@@ -30,7 +30,7 @@ const Checkout = () => {
             </div>
           </div>
           <div>
-            <label for="" className="text-gray-600 mb-2 block">
+            <label htmlFor="" className="text-gray-600 mb-2 block">
               Company Name
             </label>
             <input
@@ -39,7 +39,7 @@ const Checkout = () => {
             />
           </div>
           <div>
-            <label for="" className="text-gray-600 mb-2 block">
+            <label htmlFor="" className="text-gray-600 mb-2 block">
               Country/Region
             </label>
             <input
@@ -48,7 +48,7 @@ const Checkout = () => {
             />
           </div>
           <div>
-            <label for="" className="text-gray-600 mb-2 block">
+            <label htmlFor="" className="text-gray-600 mb-2 block">
               Street Address
             </label>
             <input
@@ -57,7 +57,7 @@ const Checkout = () => {
             />
           </div>
           <div>
-            <label for="" className="text-gray-600 mb-2 block">
+            <label htmlFor="" className="text-gray-600 mb-2 block">
               Town/City
             </label>
             <input
@@ -66,7 +66,7 @@ const Checkout = () => {
             />
           </div>
           <div>
-            <label for="" className="text-gray-600 mb-2 block">
+            <label htmlFor="" className="text-gray-600 mb-2 block">
               Zip
             </label>
             <input
@@ -75,7 +75,7 @@ const Checkout = () => {
             />
           </div>
           <div>
-            <label for="" className="text-gray-600 mb-2 block">
+            <label htmlFor="" className="text-gray-600 mb-2 block">
               Phone Number
             </label>
             <input
@@ -138,7 +138,7 @@ const Checkout = () => {
             className="text-primary focus:ring-0 rounded-sm cursor-pointer w-3 h-3"
           />
           <label
-            for="agreement"
+            htmlFor="agreement"
             className="text-gray-600 ml-3 cursor-pointer text-sm"
           >
             Agree to our

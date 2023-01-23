@@ -24,7 +24,7 @@ const Shop = () => {
               <div className="flex items-center">
                 <input type="checkbox" id="cat-1" className="text-primary" />
                 <label
-                  for="cat-1"
+                  htmlFor="cat-1"
                   className="text-gray-600 ml-3 cursor-pointer"
                 >
                   Bedroom
@@ -34,7 +34,7 @@ const Shop = () => {
               <div className="flex items-center">
                 <input type="checkbox" id="cat-1" className="text-primary" />
                 <label
-                  for="cat-1"
+                  htmlFor="cat-1"
                   className="text-gray-600 ml-3 cursor-pointer"
                 >
                   Sofa
@@ -44,7 +44,7 @@ const Shop = () => {
               <div className="flex items-center">
                 <input type="checkbox" id="cat-1" className="text-primary" />
                 <label
-                  for="cat-1"
+                  htmlFor="cat-1"
                   className="text-gray-600 ml-3 cursor-pointer"
                 >
                   Office
@@ -54,7 +54,7 @@ const Shop = () => {
               <div className="flex items-center">
                 <input type="checkbox" id="cat-1" className="text-primary" />
                 <label
-                  for="cat-1"
+                  htmlFor="cat-1"
                   className="text-gray-600 ml-3 cursor-pointer"
                 >
                   Outdoor
@@ -75,7 +75,7 @@ const Shop = () => {
               <div className="flex items-center">
                 <input type="checkbox" id="cat-1" className="text-primary" />
                 <label
-                  for="cat-1"
+                  htmlFor="cat-1"
                   className="text-gray-600 ml-3 cursor-pointer"
                 >
                   Bedroom
@@ -85,7 +85,7 @@ const Shop = () => {
               <div className="flex items-center">
                 <input type="checkbox" id="cat-1" className="text-primary" />
                 <label
-                  for="cat-1"
+                  htmlFor="cat-1"
                   className="text-gray-600 ml-3 cursor-pointer"
                 >
                   Sofa
@@ -95,7 +95,7 @@ const Shop = () => {
               <div className="flex items-center">
                 <input type="checkbox" id="cat-1" className="text-primary" />
                 <label
-                  for="cat-1"
+                  htmlFor="cat-1"
                   className="text-gray-600 ml-3 cursor-pointer"
                 >
                   Office
@@ -105,7 +105,7 @@ const Shop = () => {
               <div className="flex items-center">
                 <input type="checkbox" id="cat-1" className="text-primary" />
                 <label
-                  for="cat-1"
+                  htmlFor="cat-1"
                   className="text-gray-600 ml-3 cursor-pointer"
                 >
                   Outdoor
@@ -151,7 +151,7 @@ const Shop = () => {
                   id="size-xs"
                 />
                 <label
-                  for="size-xs"
+                  htmlFor="size-xs"
                   className="text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm"
                 >
                   xs
@@ -165,7 +165,7 @@ const Shop = () => {
                   id="size-s"
                 />
                 <label
-                  for="size-s"
+                  htmlFor="size-s"
                   className="text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm"
                 >
                   s
@@ -179,7 +179,7 @@ const Shop = () => {
                   id="size-m"
                 />
                 <label
-                  for="size-m"
+                  htmlFor="size-m"
                   className="text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm"
                 >
                   m
@@ -193,7 +193,7 @@ const Shop = () => {
                   id="size-l"
                 />
                 <label
-                  for="size-l"
+                  htmlFor="size-l"
                   className="text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm"
                 >
                   l
@@ -217,7 +217,7 @@ const Shop = () => {
                   id="color-red"
                 />
                 <label
-                  for="color-red"
+                  htmlFor="color-red"
                   className="border border-gray-200 rounded-sm h-5 w-5 cursor-pointer shadow-sm block"
                   style={{ backgroundColor: "#fc3d57" }}
                 ></label>
@@ -230,7 +230,7 @@ const Shop = () => {
                   id="color-white"
                 />
                 <label
-                  for="color-white"
+                  htmlFor="color-white"
                   className="border border-gray-200 rounded-sm h-5 w-5 cursor-pointer shadow-sm block"
                   style={{ backgroundColor: "#fff" }}
                 ></label>
@@ -243,7 +243,7 @@ const Shop = () => {
                   id="color-black"
                 />
                 <label
-                  for="color-black"
+                  htmlFor="color-black"
                   className="border border-gray-200 rounded-sm h-5 w-5 cursor-pointer shadow-sm block"
                   style={{ backgroundColor: "rgb(0, 0, 0)" }}
                 ></label>

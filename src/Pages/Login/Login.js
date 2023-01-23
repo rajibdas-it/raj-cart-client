@@ -35,7 +35,7 @@ const Login = () => {
                 className="text-primary focus:ring-0 rounded-sm cursor-pointer"
               />
               <label
-                for="agreement"
+                htmlFor="agreement"
                 className="text-gray-300 ml-3 cursor-pointer"
               >
                 Remember me

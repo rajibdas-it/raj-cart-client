@@ -8,13 +8,8 @@ import {
   FaPowerOff,
 } from "react-icons/fa";
 import { BsHeart } from "react-icons/bs";
-import { useContext } from "react";
-import { AuthContext } from "../../../Context/UserContext";
 
 const UserDashboardSidebar = () => {
-  const { myObj } = useContext(AuthContext);
-  console.log(myObj);
-
   return (
     <div>
       <div className="px-4 py-3 shadow flex items-center gap-4">
@@ -27,7 +22,7 @@ const UserDashboardSidebar = () => {
         </div>
         <div className="flex-grow">
           <p className="text-gray-600">Hello,</p>
-          <h4 className="text-gray-800 font-medium">{myObj.name}</h4>
+          <h4 className="text-gray-800 font-medium">Rajib Das</h4>
         </div>
       </div>
       <div className="mt-6 bg-white shadow rounded p-4 divide-y divide-gray-200 text-gray-600">

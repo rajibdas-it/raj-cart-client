@@ -87,7 +87,7 @@ const ProductDetails = () => {
                   id="size-xs"
                 />
                 <label
-                  for="size-xs"
+                  htmlFor="size-xs"
                   className="text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm"
                 >
                   xs
@@ -101,7 +101,7 @@ const ProductDetails = () => {
                   id="size-s"
                 />
                 <label
-                  for="size-s"
+                  htmlFor="size-s"
                   className="text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm"
                 >
                   s
@@ -115,7 +115,7 @@ const ProductDetails = () => {
                   id="size-m"
                 />
                 <label
-                  for="size-m"
+                  htmlFor="size-m"
                   className="text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm"
                 >
                   m
@@ -129,7 +129,7 @@ const ProductDetails = () => {
                   id="size-l"
                 />
                 <label
-                  for="size-l"
+                  htmlFor="size-l"
                   className="text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm"
                 >
                   l
@@ -153,7 +153,7 @@ const ProductDetails = () => {
                   id="color-red"
                 />
                 <label
-                  for="color-red"
+                  htmlFor="color-red"
                   className="bg-[#fc3d57] border border-gray-200 rounded-sm h-5 w-5 cursor-pointer shadow-sm block"
                   //   style="background-color: #fc3d57"
                 ></label>
@@ -166,7 +166,7 @@ const ProductDetails = () => {
                   id="color-white"
                 />
                 <label
-                  for="color-white"
+                  htmlFor="color-white"
                   className="bg-[#fff] border border-gray-200 rounded-sm h-5 w-5 cursor-pointer shadow-sm block"
                   //   style="background-color: #fff"
                 ></label>
@@ -179,7 +179,7 @@ const ProductDetails = () => {
                   id="color-black"
                 />
                 <label
-                  for="color-black"
+                  htmlFor="color-black"
                   className="bg-black border border-gray-200 rounded-sm h-5 w-5 cursor-pointer shadow-sm block"
                   //   style="background-color: rgb(0, 0, 0)"
                 ></label>
