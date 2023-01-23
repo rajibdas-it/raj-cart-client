@@ -14,7 +14,6 @@ import {
 import { app } from "../Firebase/firebase.config";
 import { useState } from "react";
 import { useEffect } from "react";
-import { current } from "daisyui/src/colors";
 const auth = getAuth(app);
 export const AuthContext = createContext();
 

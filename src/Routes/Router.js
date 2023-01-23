@@ -10,6 +10,7 @@ import Shop from "../Pages/Shop/Shop";
 import Wishlist from "../Pages/UserDashboard/Wishlist/Wishlist";
 import Checkout from "../Pages/Checkout/Checkout";
 import Cart from "../Pages/Cart/Cart";
+import PrivateRoutes from "./PrivateRoutes";
 
 export const router = createBrowserRouter([
   {
@@ -22,16 +23,41 @@ export const router = createBrowserRouter([
       { path: "/product-details", element: <ProductDetails></ProductDetails> },
       { path: "/login", element: <Login></Login> },
       { path: "/register", element: <Register></Register> },
-      { path: "/checkout", element: <Checkout></Checkout> },
       { path: "/cart", element: <Cart></Cart> },
+      {
+        path: "/checkout",
+        element: (
+          <PrivateRoutes>
+            <Checkout></Checkout>{" "}
+          </PrivateRoutes>
+        ),
+      },
     ],
   },
   {
     path: "/user",
-    element: <UserDashboard></UserDashboard>,
+    element: (
+      <PrivateRoutes>
+        <UserDashboard></UserDashboard>
+      </PrivateRoutes>
+    ),
     children: [
-      { path: "/user", element: <OrderHistory></OrderHistory> },
-      { path: "/user/order-history", element: <OrderHistory></OrderHistory> },
+      {
+        path: "/user",
+        element: (
+          <PrivateRoutes>
+            <OrderHistory></OrderHistory>{" "}
+          </PrivateRoutes>
+        ),
+      },
+      {
+        path: "/user/order-history",
+        element: (
+          <PrivateRoutes>
+            <OrderHistory></OrderHistory>{" "}
+          </PrivateRoutes>
+        ),
+      },
       { path: "/user/wishlist", element: <Wishlist></Wishlist> },
     ],
   },
